@@ -13,7 +13,7 @@ public class Counter {
     private int i = 0;
 
     // 主函数
-    public static void main(String[] args) {
+    public static void CounterTest() {
         final Counter cas = new Counter();
         List<Thread> threadList = new ArrayList<Thread>(600);
         long start = System.currentTimeMillis();
