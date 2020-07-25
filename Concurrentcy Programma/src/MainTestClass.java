@@ -9,7 +9,10 @@ public class MainTestClass {
         OOMTest test = OOMTest.INSTANCE;
         test.oomHeapTest();
         **/
-        JavaVmStacksOF.vmStacksOFTest();
+        // JavaVmStacksOF.vmStacksOFTest();
+
+        HappenBeforeTest test = new HappenBeforeTest();
+        test.run();
     }
 
 }
