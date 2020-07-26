@@ -11,8 +11,12 @@ public class MainTestClass {
         **/
         // JavaVmStacksOF.vmStacksOFTest();
 
-        HappenBeforeTest test = new HappenBeforeTest();
-        test.run();
+        /**
+         HappenBeforeTest test = new HappenBeforeTest();
+         test.run();
+         */
+        ConstantPoolOOM constantPoolOOM = new ConstantPoolOOM();
+        constantPoolOOM.runTimeConstPoolOOm();
     }
 
 }
