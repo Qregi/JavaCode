@@ -18,13 +18,17 @@ public class MainTestClass {
          test.run();
          */
 
-
+        /**
          ConstantPoolOOM constantPoolOOM = new ConstantPoolOOM();
          constantPoolOOM.runTimeConstPoolOOm();
 
 
         GcTest gcTest = new GcTest();
         gcTest.gcTest();
+         */
+        ThreadTest threadTest = new ThreadTest();
+        threadTest.process();
+
     }
 
 }
