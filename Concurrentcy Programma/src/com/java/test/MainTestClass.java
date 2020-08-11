@@ -1,5 +1,10 @@
 package com.java.test;
 
+import com.java.test.Entity.TreeNode;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
 /**
  * @AUthor 邱夏
  * @Date 2020/07/25
@@ -26,9 +31,46 @@ public class MainTestClass {
         GcTest gcTest = new GcTest();
         gcTest.gcTest();
          */
+
+
         ThreadTest threadTest = new ThreadTest();
         threadTest.process();
 
+        SameTree sameTree = new SameTree();
+        TreeNode treeNode1 = new TreeNode();
+        TreeNode treeNode2 = new TreeNode();
+
+        treeNode1.val = 0;
+        treeNode2.val = 1;
+
+        //sameTree.isSameTree(treeNode1, treeNode2);
+
+        treeNode1.left = treeNode2;
+        ArrayList<Integer> result = preorderTraversal(treeNode1);
+    }
+
+
+    public ArrayList<Integer> preorderTraversal (TreeNode root) {
+        // write code here
+        ArrayList<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while(!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            result.add(node.val);
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+        return result;
     }
 
 }
