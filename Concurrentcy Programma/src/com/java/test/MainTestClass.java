@@ -33,6 +33,7 @@ public class MainTestClass {
          */
 
 
+        /**
         ThreadTest threadTest = new ThreadTest();
         threadTest.process();
 
@@ -47,10 +48,14 @@ public class MainTestClass {
 
         treeNode1.left = treeNode2;
         ArrayList<Integer> result = preorderTraversal(treeNode1);
+         */
+
+        MaxProfit maxProfit = new MaxProfit();
+        maxProfit.test();
     }
 
 
-    public ArrayList<Integer> preorderTraversal (TreeNode root) {
+    public static ArrayList<Integer> preorderTraversal (TreeNode root) {
         // write code here
         ArrayList<Integer> result = new ArrayList<>();
         if (root == null) {
