@@ -1,5 +1,10 @@
 package com.java.test;
 
+import com.java.test.Entity.TreeNode;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
 public class MaxProfit {
 
     public void test() {
@@ -24,5 +29,24 @@ public class MaxProfit {
             }
         }
         return maxProfit;
+    }
+
+    public ArrayList<Integer> inorderTraversal (TreeNode root) {
+        // write code here
+        TreeNode cur = root;
+        Stack<TreeNode> stack = new Stack<>();
+        ArrayList<Integer> result = new ArrayList<>();
+        while (cur != null || !stack.isEmpty()) {
+            // 先找到最左子节点
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            // 找到最左子节点后, 可以先输出最左子节点
+            cur = stack.pop();
+            result.add(cur.val);
+            cur = cur.right;
+        }
+        return result;
     }
 }

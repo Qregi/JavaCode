@@ -1,5 +1,6 @@
 package com.java.test;
 
+import com.java.test.Entity.ListNode;
 import com.java.test.Entity.TreeNode;
 
 import java.util.ArrayList;
@@ -50,8 +51,15 @@ public class MainTestClass {
         ArrayList<Integer> result = preorderTraversal(treeNode1);
          */
 
-        MaxProfit maxProfit = new MaxProfit();
-        maxProfit.test();
+        //MaxProfit maxProfit = new MaxProfit();
+        // maxProfit.test();
+        ListNode listNode = new ListNode();
+        listNode.val = 1;
+        ListNode listNode1 = new ListNode();
+        listNode1.val = 1;
+        listNode.next = listNode1;
+        LinkListDelete linkListDelete = new LinkListDelete();
+        linkListDelete.deleteDuplicates(listNode);
     }
 
 
