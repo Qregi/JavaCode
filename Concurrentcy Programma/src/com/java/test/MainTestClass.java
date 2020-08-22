@@ -53,13 +53,23 @@ public class MainTestClass {
 
         //MaxProfit maxProfit = new MaxProfit();
         // maxProfit.test();
-        ListNode listNode = new ListNode();
+
+        /**ListNode listNode = new ListNode();
         listNode.val = 1;
         ListNode listNode1 = new ListNode();
         listNode1.val = 1;
         listNode.next = listNode1;
         LinkListDelete linkListDelete = new LinkListDelete();
         linkListDelete.deleteDuplicates(listNode);
+
+        int[] array = new int[]{2, 0};
+        SortColors sortColors = new SortColors();
+        sortColors.sortColors2(array);
+         **/
+
+        int[][] arr = new int[][] {{1, 0}};
+        SetZeros setZeros = new SetZeros();
+        setZeros.setZeroes(arr);
     }
 
 
