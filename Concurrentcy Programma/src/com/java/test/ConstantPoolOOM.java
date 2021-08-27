@@ -16,6 +16,7 @@ public class ConstantPoolOOM {
      * String::intern() 介绍
      * 如果常量池中有这个字符串，则返回这个字符串的引用
      * 如果没有，则先添加到字符串中，然后中返回引用
+	 * 测试
      */
     public void runTimeConstPoolOOm() {
         Set<String> set = new HashSet<>();
