@@ -24,6 +24,7 @@ public class ConstantPoolOOM {
         while (false) {
             set.add(String.valueOf(i++).intern());
             System.out.println(i);
+			// 测试
         }
     }
 }
