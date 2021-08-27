@@ -21,7 +21,7 @@ public class ConstantPoolOOM {
     public void runTimeConstPoolOOm() {
         Set<String> set = new HashSet<>();
         short i = 0;
-        while (true) {
+        while (false) {
             set.add(String.valueOf(i++).intern());
             System.out.println(i);
         }
