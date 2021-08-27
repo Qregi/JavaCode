@@ -70,6 +70,12 @@ public class MainTestClass {
         int[][] arr = new int[][] {{1, 0}};
         SetZeros setZeros = new SetZeros();
         setZeros.setZeroes(arr);
+
+        Object object = new Object();
+        SoftReference<SetZeros> softRef = new SoftReference<SetZeros>(setZeros);
+        setZeros = null;
+        softRef.get();
+
     }
 
 
@@ -95,5 +101,6 @@ public class MainTestClass {
         }
         return result;
     }
+
 
 }
